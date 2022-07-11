@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Samuel A. Álvarez\\Desktop\\Prog Aplicada1\\Registros\\Parcial2\\Parcial2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Samuel A. Álvarez\\Desktop\\Prog Aplicada1\\Registros\\Parcial2\\Parcial2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Samuel A. Álvarez\\Desktop\\Prog Aplicada1\\Registros\\Parcial2\\Parcial2.csproj",
+        "projectName": "Parcial2",
+        "projectPath": "C:\\Users\\Samuel A. Álvarez\\Desktop\\Prog Aplicada1\\Registros\\Parcial2\\Parcial2.csproj",
+        "packagesPath": "C:\\Users\\Samuel A. Álvarez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Samuel A. Álvarez\\Desktop\\Prog Aplicada1\\Registros\\Parcial2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samuel A. Álvarez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[3.19.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
