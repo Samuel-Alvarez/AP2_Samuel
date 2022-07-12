@@ -45,6 +45,9 @@ namespace Parcial2.Migrations
                     b.Property<double>("Cantidad")
                         .HasColumnType("REAL");
 
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("VerduraId")
                         .HasColumnType("INTEGER");
 
@@ -67,8 +70,11 @@ namespace Parcial2.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("UnidadDeMedida")
+                    b.Property<double>("Existencia")
                         .HasColumnType("REAL");
+
+                    b.Property<string>("UnidadMedida")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("VitaminaId");
 
@@ -78,62 +84,44 @@ namespace Parcial2.Migrations
                         new
                         {
                             VitaminaId = 1,
-                            Descripcion = "Vitamina C (mg)",
-                            UnidadDeMedida = 120.0
+                            Descripcion = "Vitamina C",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mg)"
                         },
                         new
                         {
                             VitaminaId = 2,
-                            Descripcion = "Betaína (mg)",
-                            UnidadDeMedida = 1.54
+                            Descripcion = "Betaína",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mg)"
                         },
                         new
                         {
                             VitaminaId = 3,
-                            Descripcion = "Vitamina K (mcg)",
-                            UnidadDeMedida = 390.0
+                            Descripcion = "Vitamina K",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mcg)"
                         },
                         new
                         {
                             VitaminaId = 4,
-                            Descripcion = "Vitamina A (mcg RAE)",
-                            UnidadDeMedida = 90.0
+                            Descripcion = "Vitamina A ",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mcg RAE)"
                         },
                         new
                         {
                             VitaminaId = 5,
-                            Descripcion = "Vitamina E (mg)",
-                            UnidadDeMedida = 700.0
+                            Descripcion = "Vitamina E",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mg)"
                         },
                         new
                         {
                             VitaminaId = 6,
-                            Descripcion = "Tiamina(B1) (mg)",
-                            UnidadDeMedida = 0.089999999999999997
-                        },
-                        new
-                        {
-                            VitaminaId = 7,
-                            Descripcion = "Choline (mg)",
-                            UnidadDeMedida = 0.14999999999999999
-                        },
-                        new
-                        {
-                            VitaminaId = 8,
-                            Descripcion = "Ácido fólico(B9) (mg)",
-                            UnidadDeMedida = 400.0
-                        },
-                        new
-                        {
-                            VitaminaId = 9,
-                            Descripcion = "Riboflavina(B2) (mg)",
-                            UnidadDeMedida = 0.90000000000000002
-                        },
-                        new
-                        {
-                            VitaminaId = 10,
-                            Descripcion = "Folate(B9) (μg)",
-                            UnidadDeMedida = 143.0
+                            Descripcion = "Ácido fólico(B9)",
+                            Existencia = 0.0,
+                            UnidadMedida = "(mg)"
                         });
                 });
 

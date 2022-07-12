@@ -1,4 +1,5 @@
 @page "/Verduras"
+@using Models
 @inject VerdurasBLL verdurasBLL
 
 <EditForm Model="this">
@@ -9,7 +10,7 @@
         </div>
     </div>
     <div class="card-body">           
-     <button class="btn btn-outline-primary" > <i class="oi oi-magnifying-glass"/> Buscar </button>
+     <button   @onclick="Buscar" class="btn btn-outline-primary" > <i class="oi oi-magnifying-glass"/> Buscar </button>
      </div>
 
     <table class="table table-striped table-hover mt-4" style="cursor: pointer;">
@@ -17,14 +18,31 @@
         <thead class="thead">
             <tr class="table">
                 <th>VerduraId</th>
-                <th>VitaminaId</th>
                 <th>Nombre</th>
                 <th>Fecha Creacion</th>
-                <th>Observaciones de Verduras</th> 
+                <th>Observaciones de las Verduras</th> 
             </tr>
         </thead>
+         <tbody>
+
+            @foreach (var verdura in verduras)
+            {
+                <tr>
+                    <td>@verdura.VerduraId</td> 
+                    <td>@verdura.Nombre</td>
+                    <td>@verdura.Fecha.ToString("dd/MM/yyyy")</td>
+                    <td>@verdura.Observaciones </td> 
+                </tr>
+            }
+
+        </tbody>
     </table>
 </EditForm>
+
 @code{
-    
+     public List<Verduras> verduras { get; set; } = new List<Verduras>();
+
+        void Buscar(){
+            verduras = verdurasBLL.GetList();
+        }
 }

@@ -1,4 +1,5 @@
 @page "/Vitamina"
+@using Models
 
 @inject VitaminasBLL vitaminasBLL
 
@@ -19,10 +20,18 @@
             <tr class="table">
                 <th>VitaminaId</th>
                 <th>Descripcion</th>
+                <th>Existencia</th>
                 <th>Unidad de medida</th>
             </tr>
         </thead>
     </table>
+    
 </EditForm>
 @code{
+    public List<Vitaminas> vitaminas { get; set; } = new List<Vitaminas>();
+
+    void Buscar()
+    {
+        vitaminas = vitaminasBLL.GetList();
+    }
 }

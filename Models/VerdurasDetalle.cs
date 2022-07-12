@@ -10,6 +10,7 @@ namespace Parcial2.Models
         public int VerduraId { get; set; }
         public int VitaminaId { get; set; }
         public double Cantidad { get; set; }
+        public string? Descripcion { get; set; }
 
 
     }

@@ -34,7 +34,7 @@ namespace Parcial2.BLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida += item.Cantidad;
+                vitamina.Existencia += item.Cantidad;
             }
 
             _contexto.Verduras.Add(verdura);
@@ -53,12 +53,12 @@ namespace Parcial2.BLL
            .SingleOrDefault();
 
 
-            //restar el inventario del detalle anterior
+            //restar 
             foreach (var item in anterior.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
 
-                vitamina.UnidadDeMedida -= item.Cantidad;
+                vitamina.Existencia -= item.Cantidad;
             }
 
             //borrar los items del detalle anterior
@@ -68,7 +68,7 @@ namespace Parcial2.BLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida += item.Cantidad;
+                vitamina.Existencia += item.Cantidad;
 
                 _contexto.Entry(item).State = EntityState.Added;
             }
@@ -87,7 +87,7 @@ namespace Parcial2.BLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida -= item.Cantidad;
+                vitamina.Existencia -= item.Cantidad;
 
             }
 
