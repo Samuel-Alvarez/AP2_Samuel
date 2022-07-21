@@ -52,7 +52,7 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[3.19.3, )"
+              "version": "[3.19.4, )"
             }
           },
           "imports": [

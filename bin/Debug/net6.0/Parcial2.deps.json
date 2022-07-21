@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
-          "Radzen.Blazor": "3.19.3"
+          "Radzen.Blazor": "3.19.4"
         },
         "runtime": {
           "Parcial2.dll": {}
@@ -209,7 +209,7 @@
         }
       },
       "Microsoft.JSInterop/5.0.0": {},
-      "Radzen.Blazor/3.19.3": {
+      "Radzen.Blazor/3.19.4": {
         "dependencies": {
           "LibSassBuilder": "2.0.1",
           "Microsoft.AspNetCore.Components": "5.0.0",
@@ -219,8 +219,8 @@
         },
         "runtime": {
           "lib/net5.0/Radzen.Blazor.dll": {
-            "assemblyVersion": "3.19.3.0",
-            "fileVersion": "3.19.3.0"
+            "assemblyVersion": "3.19.4.0",
+            "fileVersion": "3.19.4.0"
           }
         }
       },
@@ -582,12 +582,12 @@
       "path": "microsoft.jsinterop/5.0.0",
       "hashPath": "microsoft.jsinterop.5.0.0.nupkg.sha512"
     },
-    "Radzen.Blazor/3.19.3": {
+    "Radzen.Blazor/3.19.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CzJJTlquJvfz0kJJQ5VAHyCG9orQnuze4OZ19MaCUmbUJmAVEIUf70yNVpXUfekbJe3095HxeZvZn/h7Sv8jSA==",
-      "path": "radzen.blazor/3.19.3",
-      "hashPath": "radzen.blazor.3.19.3.nupkg.sha512"
+      "sha512": "sha512-XZidy/Th3I4m4/rMDCUuKPIJvpQ7EyCV5+rc8gtnRpF3Ur2F4QkNjFBt4/TF+LkjunkGR8QZcjyEaxm+SAzSlg==",
+      "path": "radzen.blazor/3.19.4",
+      "hashPath": "radzen.blazor.3.19.4.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
       "type": "package",

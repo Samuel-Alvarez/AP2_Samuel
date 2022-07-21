@@ -1,10 +1,10 @@
 @page "/Verdura"
 @page "/Verdura/{VerduraId:int}"
-@using Microsoft.EntityFrameworkCore
+
 @using Models
 @inject VerdurasBLL verdurasBLL
 @inject VitaminasBLL vitaminasBLL
-@*@inject NotificationService notificationService*@
+@inject NotificationService notificationService
 
 <EditForm Model="verdura" OnValidSubmit="Guardar" >
     <DataAnnotationsValidator/>
@@ -59,7 +59,7 @@
                @*Boton de agregar detalle*@
                 <div class="col-2">
                     <button type="button" class="btn btn-outline-primary input-group-text mt-4" @onclick="AgregarDetalle">
-                        <span class="oi oi-plus"></span>
+                        <span class="oi oi-plus">Agregar</span>
                     </button>
                 </div>
                 </div>
@@ -75,7 +75,6 @@
                         <th>VitaminaId</th>
                         <th>Cantidad</th> 
                         <th>Descripcion</th>
-                        <th>Unidad Medida</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -140,49 +139,49 @@
         {
            if  (verdurasBLL.Guardar(this.verdura))
            {
-                /*ShowNotification(
+                ShowNotification(
                 new NotificationMessage
                 {
                     Severity = NotificationSeverity.Success,
                     Summary = "Guardado correctamente"
-                });*/
+                });
                      
             }
             else
             { 
             }
         }
-        void Modificar()
-        {
-            
-        }
         
-        public void AgregarDetalle()
-        {
-            var vitamina = vitaminasBLL.Buscar(detalle.VitaminaId);
-            detalle.Descripcion = vitamina.Descripcion;
-            this.verdura.Detalle.Add(this.detalle);
-           this.detalle = new VerdurasDetalle();
-        }
+    public void AgregarDetalle()
+    {
+        var vitamina = vitaminasBLL.Buscar(detalle.VitaminaId);
+        detalle.Descripcion = vitamina.Descripcion;
+        this.verdura.Detalle.Add(this.detalle);
+        this.detalle = new VerdurasDetalle();
+    }
    
     void Eliminar()
     {
         if(verdurasBLL.Eliminar(this.verdura)){
-            /*ShowNotification(
+            ShowNotification(
             new NotificationMessage
                 {
                     Severity = NotificationSeverity.Success,
                     Summary = "Elimino correctamente"
-                });*/
+                });
             }
         else
         {
 
         }
     }
-    /*void ShowNotification(NotificationMessage message)
+    void RemoverFila(VerdurasDetalle item)
+    {
+        verdura.Detalle.Remove(item);
+    }
+    void ShowNotification(NotificationMessage message)
     {
         notificationService.Notify(message);
 
-    }*/
+    }
 }

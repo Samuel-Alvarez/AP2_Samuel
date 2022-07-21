@@ -1,6 +1,5 @@
 @page "/Vitamina"
 @using Models
-
 @inject VitaminasBLL vitaminasBLL
 
 <EditForm Model="this">
@@ -11,7 +10,7 @@
         </div>
     </div>
     <div class="card-body">           
-     <button class="btn btn-outline-primary" > <i class="oi oi-magnifying-glass"/> Buscar </button>
+     <button @onclick="Buscar" class="btn btn-outline-primary" > <i class="oi oi-magnifying-glass"/> Buscar </button>
      </div>
 
     <table class="table table-striped table-hover mt-4" style="cursor: pointer;">
@@ -24,8 +23,19 @@
                 <th>Unidad de medida</th>
             </tr>
         </thead>
+        <tbody>
+           @foreach (var vitamina in vitaminas)
+            {
+                <tr>
+                    <td>@vitamina.VitaminaId</td>
+                    <td>@vitamina.Descripcion</td>
+                    <td>@vitamina.Existencia</td>
+                    <td>@vitamina.UnidadMedida</td>
+                </tr>
+            }
+
+        </tbody>
     </table>
-    
 </EditForm>
 @code{
     public List<Vitaminas> vitaminas { get; set; } = new List<Vitaminas>();

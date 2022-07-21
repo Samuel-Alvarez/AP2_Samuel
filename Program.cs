@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Parcial2.BLL;
+using Parcial2.Data;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddScoped<VitaminasBLL>();
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddSingleton<WeatherForecastService>();
 
 
 
